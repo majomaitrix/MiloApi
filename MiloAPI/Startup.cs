@@ -98,7 +98,11 @@ namespace MiloAPI
         {
             // Habilitar Swagger en todos los entornos (incluyendo Production)
             app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Milo API v1");
+                c.RoutePrefix = string.Empty; // Sirve Swagger en "/"
+            });
 
             // Middleware de Serilog para logging de requests
             app.UseSerilogRequestLogging();
