@@ -96,11 +96,9 @@ namespace MiloAPI
 
         public void Configure(WebApplication app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            // Habilitar Swagger en todos los entornos (incluyendo Production)
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             // Middleware de Serilog para logging de requests
             app.UseSerilogRequestLogging();
