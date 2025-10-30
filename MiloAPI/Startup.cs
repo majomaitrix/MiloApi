@@ -31,9 +31,11 @@ namespace MiloAPI
             var appConfig = new AppConfiguration();
             _configuration.Bind(appConfig);
             services.AddSingleton(appConfig); // Inyectable en toda la app
-            // Configurar la base de datos
+            // Configurar la base de datos (prioriza variable de entorno y luego appsettings)
+            var defaultConnection = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
+                                   ?? _configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(defaultConnection));
 
             // Configurar CORS
             services.AddCors(options =>
