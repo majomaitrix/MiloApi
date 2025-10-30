@@ -1,0 +1,70 @@
+#############################
+# Git ignore para Milo API  #
+#############################
+
+# Sistema / OS
+.DS_Store
+Thumbs.db
+
+# IDEs y editores
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET build
+**/bin/
+**/obj/
+**/TestResults/
+**/BenchmarkDotNet.Artifacts/
+**/publish/
+
+# Paquetes NuGet locales
+*.nupkg
+*.snupkg
+
+# Logs y diagnósticos
+*.log
+logs/
+MiloAPI/logs/
+
+# Cobertura de código
+coverage/
+.coverage
+*.coverage
+*.coveragejson
+
+# Archivos temporales
+*.tmp
+*.temp
+*.cache
+
+# Secretos y configuraciones locales
+appsettings.Development.json
+appsettings.*.local.json
+secrets.json
+**/secrets/*.json
+
+# Entity Framework Core
+# (No ignorar Migrations - se deben versionar)
+
+# Frontend (Vite + Vue)
+MiloFrontEnd/node_modules/
+MiloFrontEnd/dist/
+MiloFrontEnd/.vite/
+MiloFrontEnd/.eslintcache
+MiloFrontEnd/npm-debug.log*
+MiloFrontEnd/yarn-error.log*
+MiloFrontEnd/pnpm-debug.log*
+
+# Variables de entorno
+.env
+.env.*
+
+# Otros VCS
+.svn/
+.hg/
+
+
