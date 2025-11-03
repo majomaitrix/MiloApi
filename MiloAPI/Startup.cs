@@ -42,7 +42,7 @@ namespace MiloAPI
             {
                 options.AddPolicy("AllowFrontend", policy =>
                 {
-                    policy.WithOrigins("http://localhost:3000", "http://127.0.0.1:3000", "https://milofrontend-seven.vercel.app/")
+                    policy.WithOrigins("http://localhost:3000", "http://127.0.0.1:3000", "https://milofrontend-seven.vercel.app")
                           .AllowAnyHeader()
                           .AllowAnyMethod()
                           .AllowCredentials();
