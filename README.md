@@ -17,6 +17,12 @@ This project demonstrates backend development practices including JWT authentica
 - Automated tests with xUnit, Moq and FluentAssertions
 - 18 automated tests currently passing
 
+## API Preview
+
+Swagger/OpenAPI documentation for the REST API:
+
+![Milo API Swagger](docs/screenshots/swagger-api.PNG)
+
 ## Tabla de Contenidos
 
 - [Características](#características)
