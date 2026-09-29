@@ -53,8 +53,7 @@ namespace MiloAPI.Middleware
                 Code = 400,
                 Message = "Error de validación",
                 Type = "Validación de datos",
-                StackTrace = ex.Message,
-                Errors = new[] { ex.Message }
+                Errors = new[] { "The request contains invalid data." }
             };
 
             var jsonResponse = JsonSerializer.Serialize(response, new JsonSerializerOptions
