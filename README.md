@@ -1,6 +1,21 @@
 # Milo API
 
-API REST desarrollada en .NET 6.0 para la gestión de un sistema de restaurante, incluyendo funcionalidades de productos, categorías, pedidos, usuarios y autenticación con JWT.
+Backend REST API built with ASP.NET Core and PostgreSQL for a restaurant management system.
+
+This project demonstrates backend development practices including JWT authentication, role-based authorization, Clean Architecture, CQRS with MediatR, Entity Framework Core, structured logging with Serilog, health checks, Docker support, pagination, filtering, and automated testing.
+
+## Key Technical Highlights
+
+- ASP.NET Core REST API
+- PostgreSQL + Entity Framework Core
+- JWT authentication and role-based authorization
+- Clean Architecture
+- CQRS with MediatR
+- Structured logging with Serilog
+- Docker support
+- Pagination, filtering and sorting
+- Automated tests with xUnit, Moq and FluentAssertions
+- 18 automated tests currently passing
 
 ## Tabla de Contenidos
 
