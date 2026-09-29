@@ -23,6 +23,22 @@ namespace MiloAPI.Middleware
             {
                 await HandleValidationExceptionAsync(context, ex);
             }
+            catch (Exception ex)
+            {
+                context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                context.Response.ContentType = "application/json";
+
+                var response = new
+                {
+                    code = 500,
+                    message = "An unexpected error occurred.",
+                    type = "InternalServerError"
+                };
+
+                var jsonResponse = JsonSerializer.Serialize(response);
+
+                await context.Response.WriteAsync(jsonResponse);
+            }
         }
 
         private static async Task HandleValidationExceptionAsync(HttpContext context, ValidationException ex)
