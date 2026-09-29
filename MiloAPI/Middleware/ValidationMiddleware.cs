@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 
@@ -25,6 +26,7 @@ namespace MiloAPI.Middleware
             }
             catch (Exception ex)
             {
+                Log.Error(ex, "Unhandled exception processing request {Path}", context.Request.Path);
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
                 context.Response.ContentType = "application/json";
 
@@ -36,7 +38,7 @@ namespace MiloAPI.Middleware
                 };
 
                 var jsonResponse = JsonSerializer.Serialize(response);
-
+                
                 await context.Response.WriteAsync(jsonResponse);
             }
         }
