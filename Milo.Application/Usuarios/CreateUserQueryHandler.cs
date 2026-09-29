@@ -27,6 +27,32 @@ namespace Milo.Application.Usuarios
         {
             try
             {
+                var emailExiste = await _context.usuarios
+                .AnyAsync(u => u.Email == req.User.Email, cancellationToken);
+
+                if (emailExiste)
+                {
+                    return new Info_data
+                    {
+                        code = Constants.CodeCatch,
+                        message = Constants.MessageCatch,
+                        message_error = "Email duplicado"
+                    };
+                }
+
+                var rolExiste = await _context.roles
+                .AnyAsync(r => r.Id == req.User.Rol, cancellationToken);
+
+                if (!rolExiste)
+                {
+                    return new Info_data
+                    {
+                        code = Constants.CodeCatch,
+                        message = Constants.MessageCatch,
+                        message_error = "El rol especificado no existe"
+                    };
+                }
+
                 var usuario = new Usuario
                 {
                     Nombre = req.User.Nombre,

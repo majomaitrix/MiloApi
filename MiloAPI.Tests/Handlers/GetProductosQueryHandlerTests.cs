@@ -34,9 +34,9 @@ namespace MiloAPI.Tests.Handlers
 
             var productos = new List<Producto>
             {
-                new Producto { Id = 1, Nombre = "Coca Cola", Precio = 2.50m, Stock = 100, CategoriaId = 1, Categoria = categoria },
-                new Producto { Id = 2, Nombre = "Pepsi", Precio = 2.30m, Stock = 80, CategoriaId = 1, Categoria = categoria },
-                new Producto { Id = 3, Nombre = "Sprite", Precio = 2.40m, Stock = 60, CategoriaId = 1, Categoria = categoria }
+                new Producto { Id = 1, Nombre = "Coca Cola", Descripcion = "Bebida gaseosa", Precio = 2.50m, Stock = 100, CategoriaId = 1, Categoria = categoria },
+                new Producto { Id = 2, Nombre = "Pepsi", Descripcion = "Bebida gaseosa", Precio = 2.30m, Stock = 80, CategoriaId = 1, Categoria = categoria },
+                new Producto { Id = 3, Nombre = "Sprite", Descripcion = "Bebida gaseosa", Precio = 2.40m, Stock = 60, CategoriaId = 1, Categoria = categoria }
             };
             _context.productos.AddRange(productos);
             await _context.SaveChangesAsync();
@@ -74,9 +74,9 @@ namespace MiloAPI.Tests.Handlers
 
             var productos = new List<Producto>
             {
-                new Producto { Id = 1, Nombre = "Coca Cola", Precio = 2.50m, Stock = 100, CategoriaId = 1, Categoria = categoria },
-                new Producto { Id = 2, Nombre = "Pepsi", Precio = 2.30m, Stock = 80, CategoriaId = 1, Categoria = categoria },
-                new Producto { Id = 3, Nombre = "Sprite", Precio = 2.40m, Stock = 60, CategoriaId = 1, Categoria = categoria }
+                new Producto { Id = 1, Nombre = "Coca Cola", Descripcion = "Bebida gaseosa",Precio = 2.50m, Stock = 100, CategoriaId = 1, Categoria = categoria },
+                new Producto { Id = 2, Nombre = "Pepsi", Descripcion = "Bebida gaseosa",Precio = 2.30m, Stock = 80, CategoriaId = 1, Categoria = categoria },
+                new Producto { Id = 3, Nombre = "Sprite", Descripcion = "Bebida gaseosa",Precio = 2.40m, Stock = 60, CategoriaId = 1, Categoria = categoria }
             };
             _context.productos.AddRange(productos);
             await _context.SaveChangesAsync();
@@ -111,9 +111,9 @@ namespace MiloAPI.Tests.Handlers
 
             var productos = new List<Producto>
             {
-                new Producto { Id = 1, Nombre = "Coca Cola", Precio = 2.50m, Stock = 100, CategoriaId = 1, Categoria = categoria },
-                new Producto { Id = 2, Nombre = "Pepsi", Precio = 2.30m, Stock = 80, CategoriaId = 1, Categoria = categoria },
-                new Producto { Id = 3, Nombre = "Sprite", Precio = 2.40m, Stock = 60, CategoriaId = 1, Categoria = categoria }
+                new Producto { Id = 1, Nombre = "Coca Cola", Descripcion = "Bebida gaseosa",Precio = 2.50m, Stock = 100, CategoriaId = 1, Categoria = categoria },
+                new Producto { Id = 2, Nombre = "Pepsi", Descripcion = "Bebida gaseosa",Precio = 2.30m, Stock = 80, CategoriaId = 1, Categoria = categoria },
+                new Producto { Id = 3, Nombre = "Sprite", Descripcion = "Bebida gaseosa",Precio = 2.40m, Stock = 60, CategoriaId = 1, Categoria = categoria }
             };
             _context.productos.AddRange(productos);
             await _context.SaveChangesAsync();
