@@ -23,6 +23,41 @@ Swagger/OpenAPI documentation for the REST API:
 
 ![Milo API Swagger](docs/screenshots/swagger-api.PNG)
 
+## Project Case Study
+
+### Problem
+
+A restaurant management system needs a backend capable of managing products, categories, users and orders while controlling access according to user roles.
+
+### Challenge
+
+The API needed to support authentication, authorization, relational data, pagination, filtering and controlled order-status transitions while keeping the codebase maintainable and testable.
+
+### Solution
+
+The backend was implemented with ASP.NET Core and PostgreSQL using a layered architecture.
+
+Key implementation decisions include:
+
+- JWT-based authentication
+- Role-based authorization
+- Entity Framework Core for persistence
+- CQRS with MediatR
+- Pagination, filtering and sorting
+- Controlled order-state transitions
+- Structured logging with Serilog
+- Health check endpoints
+- Docker support
+- Automated tests for authentication, users, products, order states and refresh tokens
+
+### Technologies
+
+ASP.NET Core · C# · PostgreSQL · Entity Framework Core · MediatR · JWT · Serilog · xUnit · Moq · FluentAssertions · Docker
+
+### Result
+
+The repository currently includes a documented REST API, Swagger/OpenAPI support and an automated test suite with 18 tests passing.
+
 ## Tabla de Contenidos
 
 - [Características](#características)
