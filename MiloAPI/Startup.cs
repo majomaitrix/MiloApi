@@ -114,9 +114,6 @@ namespace MiloAPI
             // Middleware personalizado para manejo de errores
             app.UseMiddleware<Middleware.ValidationMiddleware>();
 
-            // Middleware JWT para autenticación
-            app.UseMiddleware<Middleware.JwtMiddleware>();
-
             // Configurar autenticación y autorización
             app.UseAuthentication();
             app.UseAuthorization();
