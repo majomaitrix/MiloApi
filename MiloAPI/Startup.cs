@@ -52,11 +52,10 @@ namespace MiloAPI
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
-            services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
             services.AddSwaggerDocumentation();
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserQueryHandler).Assembly));
-            
+            services.AddMediatR(cfg =>
+                cfg.RegisterServicesFromAssembly(typeof(CreateUserQueryHandler).Assembly));
+
             // Configurar validación automática de modelos
             services.Configure<ApiBehaviorOptions>(options =>
             {
